@@ -1,0 +1,36 @@
+CREATE TABLE usuarios(
+	id_usuario INT PRIMARY KEY IDENTITY NOT NULL,
+	nome_usuario VARCHAR(200) NOT NULL,
+	mail_usuario VARCHAR(200) NOT NULL,
+	senha_usuario VARCHAR(50) NOT NULL,
+	nivel_usuario INT NOT NULL,
+	status VARCHAR(50) NOT NULL
+);
+GO
+CREATE TABLE fornecedor(
+	id_forn INT PRIMARY KEY IDENTITY NOT NULL,
+	nome_forn VARCHAR(200) NOT NULL
+);
+GO
+CREATE TABLE estoque(
+	id_estoque INT PRIMARY KEY IDENTITY NOT NULL,
+	nroproduto INT NOT NULL,
+	nomeproduto VARCHAR(200) NOT NULL,
+	categoria VARCHAR(100) NOT NULL,
+	quantidade int NOT NULL,
+	fornecedor VARCHAR(100) NOT NULL,
+);
+GO
+CREATE TABLE categoria (
+	id_categoria INT PRIMARY KEY IDENTITY NOT NULL,
+	nome_categoria VARCHAR(200) NOT NULL
+);
+
+
+
+SELECT * FROM usuarios
+SELECT * FROM fornecedor
+SELECT * FROM estoque
+SELECT * FROM categoria
+
+drop table usuarios

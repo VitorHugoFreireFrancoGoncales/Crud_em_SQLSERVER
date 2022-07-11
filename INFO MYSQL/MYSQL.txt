@@ -1,0 +1,73 @@
+<!-- TABELAS QUE PRECISAM SER CRIADAS NO MYSQL -->
+
+
+BANCO DE DADOS: curso_estoque
+
+
+TABELA: categoria (
+	id_categoria int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ 	nome_categoria varchar(200) NOT NULL)
+
+
+TABELA: estoque (
+	id_estoque int(11) NOT NULL AUTO_INCREMENT, 
+	nroproduto int(11) NOT NULL, 
+	nomeproduto varchar(200) NOT NULL, 
+	categoria varchar(200) NOT NULL, 
+	quantidade int(11) NOT NULL, 
+	fornecedor varchar(100) NOT NULL)
+
+
+TABELA: fornecedor (
+	id_form NOT NULL AUTO_INCREMENT, 
+	nome_forn NOT NULL)
+
+
+TABELA: usuarios (id_usuarios int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nome_usuario varchar(200) NOT NULL, 
+	nome_usuario varchar(200) NOT NULL, 
+	mail_usuario varchar(250) NOT NULL, 
+	senha_usuario varchar(50) NOT NULL, 
+	nivel_usuario int(2) NOT NULL, 
+	status varchar(50) NOT NULL)
+
+
+
+
+
+
+
+
+
+USE des_estagio;
+GO
+create table curso_estoque (categoria);
+CREATE TABLE categoria(
+	id_categoria INT IDENTITY PRIMARY KEY NOT NULL,
+	nome_categoria VARCHAR(200) NOT NULL);
+GO
+CREATE TABLE estoque(
+	id_estoque INT IDENTITY PRIMARY KEY NOT NULL,
+	nroproduto INT NOT NULL, 
+	nomeproduto VARCHAR(200) NOT NULL, 
+	categoria VARCHAR(200) NOT NULL, 
+	quantidade INT NOT NULL, 
+	fornecedor VARCHAR(100) NOT NULL);
+GO
+CREATE TABLE fornecedor(
+id_forn  INT IDENTITY PRIMARY KEY NOT NULL, 
+	nome_forn VARCHAR(200) NOT NULL);
+GO
+CREATE TABLE usuarios (
+	id_usuarios INT IDENTITY PRIMARY KEY NOT NULL,
+	nome_usuario varchar(200) NOT NULL, 
+	mail_usuario varchar(250) NOT NULL, 
+	senha_usuario varchar(50) NOT NULL, 
+	nivel_usuario INT NOT NULL, 
+	status varchar(50) NOT NULL);
+
+
+	SELECT * FROM categoria;
+	SELECT * FROM estoque;
+	SELECT * FROM fornecedor;
+	SELECT * FROM usuarios;
